@@ -1,0 +1,132 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #0074B8; /* Blue */
+  color: #fff;
+  padding: 15px 0;
+}
+
+.header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.header nav {
+  float: right;
+}
+
+.header nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background: #3CB371; /* Green */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #fff;
+  color: #3CB371;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background: #f0f0f0;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section.alt {
+  background: #f9f9f9;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;           /* allows cards to move to the next line */
+  gap: 20px;                 /* space between cards */
+  justify-content: center;   /* centers the cards horizontally */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1 1 280px;           /* flexible width, min 280px, grow if space */
+  max-width: 300px;           /* prevents cards from growing too wide */
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 15px;
+}
+
+.card-img {
+  width: 100%;               /* image fills card width */
+  height: auto;              /* maintains aspect ratio */
+  display: block;
+  border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+  background: #0074B8; /* Blue */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;          /* cards take full width on tiny screens */
+  }
+
+  .header nav {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+}
